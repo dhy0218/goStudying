@@ -34,4 +34,19 @@ func main() {
     test2(&array)
     fmt.Println(array)//1,3,3
 
+    fmt.Println("测试语法糖【：i】********************")
+    testArrays := [][]int{
+    	{1,2},
+    	{3,4},
+        {5,6},
+        {7,8},
+    }
+	for i,data1 := range testArrays  {
+		for j,data2 := range testArrays[:i]{
+			for k,data3 := range testArrays[:j]  {
+				fmt.Println(i,data1,j,data2,k,data3)
+			}
+		}
+	}
+
 }
